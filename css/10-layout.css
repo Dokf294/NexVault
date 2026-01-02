@@ -12,12 +12,12 @@
 
 .header-layout{
     display: grid;
-    grid-template-columns: minmax(8rem, 12rem) 1fr 1fr;
+    grid-template-columns: minmax(6rem, 12rem) 1fr 1fr;
     grid-template-rows: inherit;
     z-index: 3;
 } 
 .main-layout{
-    /* background-color: rgb(111, 255, 0); */
+    background-color: rgb(111, 255, 0);
 
 }
 .footer-layout{

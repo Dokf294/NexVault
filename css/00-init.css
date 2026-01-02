@@ -3,4 +3,5 @@
 :root{
     --font-nutino: 'Nunito', sans-serif;
     --font-nutino-sans: 'Nunito Sans', sans-serif; 
+    --time-animation: .175s
 }

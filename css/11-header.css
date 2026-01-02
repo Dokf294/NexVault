@@ -1,32 +1,32 @@
-@charset "UTF-8"; 
+@charset "UTF-8";
 
 /* [LOGO] */
-.header-layout .header-icon{
-    display: flex; 
+.header-layout .header-icon {
+    display: flex;
     place-content: center;
     align-items: center;
 
     /* background-color: red; */
 }
 
-.header-icon .icon{
+.header-icon .icon {
     display: flex;
     justify-content: center;
-    margin-right: .5rem;
+    margin-left: .5rem;
     height: 90%;
     width: 50%;
     /* background-color: aliceblue; */
 }
 
-.header-icon .icon .logo{
+.header-icon .icon .logo {
     mask-image: url(../assets/payload.svg);
     height: calc(1.9rem * 1.8);
     width: calc(1.5rem * 1.8);
-    mask-size: cover; 
+    mask-size: cover;
     background-color: currentColor;
 }
 
-.header-icon .icon .text{ 
+.header-icon .icon .text {
     position: absolute;
     font-weight: 500;
     color: var(--color-black);
@@ -34,28 +34,31 @@
     top: 2.1rem;
 }
 
-/* [LEFT SIDE] */ 
-.header-layout .left-options{
-    display: grid; 
-    grid-template-columns: minmax(5rem, 8rem) minmax(5rem, 8rem) minmax(5rem, 8rem) minmax(5rem, 8rem); 
-    align-items: center; 
+/* [LEFT SIDE] */
+.header-layout .left-options {
+    display: grid;
+    grid-template-columns: minmax(5rem, 8rem) minmax(5rem, 8rem) minmax(5rem, 8rem) minmax(5rem, 8rem);
+    align-items: center;
 }
 
-.header-layout .left-options .option{
+.header-layout .left-options .option {
     height: 2.5rem;
-    width: 7rem; 
+    width: 5rem;
     border: none;
     border-radius: 6px;
     background-color: transparent;
     color: hsl(30deg, 2%, 52%);
-    font-size: 17px;
+    font-size: 18px;
     cursor: pointer;
+    transition: background var(--time-animation);
+
 }
 
-.header-layout .left-options .option:hover{
+.header-layout .left-options .option:hover {
     background-color: rgba(0.2, 0.2, .2, .02);
 }
-/* [RIGHT SIDE] */ 
+
+/* [RIGHT SIDE] */
 
 .right-options {
     display: flex;
@@ -64,19 +67,25 @@
     justify-content: flex-end;
     gap: 10px;
     /* background-color: red; */
-    
+    transition: gap var(--time-animation);
 }
 
-.right-options .option{    
+@media (min-width: 900px){
+    .right-options {
+        gap:35px;
+    }
+}
+.right-options .option {
     display: flex;
     justify-content: end;
     /* background-color: #211f1f; */
     height: 55%;
-    max-width: 15rem;
+    max-width: 17rem;
     width: 50%;
     white-space: nowrap;
+
     /* background-color: #fff; */
-} 
+}
 
 .right-options .option .button {
     width: 100%;
@@ -86,35 +95,59 @@
     font-size: 17px;
     font-weight: 500;
     cursor: pointer;
+    transition: background var(--time-animation);
+}
+
+.right-options .option:is(.option-language, .option-partner):hover {
+    background-color: rgba(255, 255, 255, 0.089);
 }
 
 .right-options .option-language {
     display: flex;
     justify-content: center;
     width: 10rem;
-} 
+}
 
-.right-options .option-language .language{
+.right-options .option-language .language {
+    display: flex;
+    place-content: center; 
+    align-items: center;
+    gap: 2px;
     width: 6.5rem;
     border: 2px solid #c6c4c0;
 }
 
-.right-options .option-partner .partner{
+.right-options .option-language .language .text {
+    margin: 0;
+    margin-left: 1rem;
+    font-size: 18px;
+}
+
+.right-options .option-language .language .arrow {
+    margin: 0 0 1px 4px;
+    mask-image: url(../assets/arrowdown.svg);
+    background-color: currentColor;
+    height: 2.2rem;
+    width: 2.2rem;
+    mask-size: cover;
+}
+
+.right-options .option-partner .partner {
     border: 2px solid #81807b;
 }
- 
-.right-options .option-order .order{
+
+.right-options .option-order .order {
+    margin-right: 10px;
     border: 2px none;
     background-color: #f3eded;
 }
 
-.right-options .option .button a{
+.right-options .option .button a {
+    display: block;
     text-decoration: none;
+    place-content: center;
     color: #211f1f;
     font-family: var(--font-nutino);
-} 
-
-
-
-
-
+    height: 100%;
+    width: 100%;
+}

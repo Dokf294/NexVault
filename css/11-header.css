@@ -42,8 +42,8 @@
 }
 
 .header-layout .left-options .option{
-    height: 3rem;
-    width: 5rem; 
+    height: 2.5rem;
+    width: 7rem; 
     border: none;
     border-radius: 6px;
     background-color: transparent;
@@ -58,11 +58,11 @@
 /* [RIGHT SIDE] */ 
 
 .right-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     grid-template-rows: inherit;
     align-items: center;
-    justify-items: flex-start;
+    justify-content: flex-end;
+    gap: 10px;
     /* background-color: red; */
     
 }
@@ -72,8 +72,10 @@
     justify-content: end;
     /* background-color: #211f1f; */
     height: 55%;
-    width: clamp(8rem, 20vw, 15rem);
-
+    max-width: 15rem;
+    width: 50%;
+    white-space: nowrap;
+    /* background-color: #fff; */
 } 
 
 .right-options .option .button {
@@ -81,15 +83,15 @@
     height: 100%;
     border-radius: 3rem;
     background-color: transparent;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .right-options .option-language {
     display: flex;
     justify-content: center;
     width: 10rem;
-    /* background-color: #81807b; */
 } 
 
 .right-options .option-language .language{
@@ -103,7 +105,7 @@
  
 .right-options .option-order .order{
     border: 2px none;
-    background-color: #fff;
+    background-color: #f3eded;
 }
 
 .right-options .option .button a{
@@ -112,8 +114,7 @@
     font-family: var(--font-nutino);
 } 
 
-.right-options :is(.option-partner, .option-order){
-}
+
 
 
 

@@ -1,0 +1,26 @@
+@charset "UTF-8"; 
+
+.body-page-layout{
+    display: grid;
+    height: 100%;  
+
+    background-color: var(--color-gray-60);
+
+    grid-template-rows: 98px 1fr 200px;
+} 
+
+
+.header-layout{
+    display: grid;
+    grid-template-columns: minmax(8rem, 12rem) 1fr 1fr;
+    grid-template-rows: inherit;
+    z-index: 3;
+} 
+.main-layout{
+    background-color: rgb(111, 255, 0);
+
+}
+.footer-layout{
+    background-color: rgb(21, 0, 255);
+
+}

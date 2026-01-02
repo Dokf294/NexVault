@@ -1,0 +1,119 @@
+@charset "UTF-8"; 
+
+/* [LOGO] */
+.header-layout .header-icon{
+    display: flex; 
+    place-content: center;
+    align-items: center;
+
+    /* background-color: red; */
+}
+
+.header-icon .icon{
+    display: flex;
+    justify-content: center;
+    margin-right: .5rem;
+    height: 90%;
+    width: 50%;
+    /* background-color: aliceblue; */
+}
+
+.header-icon .icon .logo{
+    mask-image: url(../assets/payload.svg);
+    height: calc(1.9rem * 1.8);
+    width: calc(1.5rem * 1.8);
+    mask-size: cover; 
+    background-color: currentColor;
+}
+
+.header-icon .icon .text{ 
+    position: absolute;
+    font-weight: 500;
+    color: var(--color-black);
+    font-size: x-large;
+    top: 2.1rem;
+}
+
+/* [LEFT SIDE] */ 
+.header-layout .left-options{
+    display: grid; 
+    grid-template-columns: minmax(5rem, 8rem) minmax(5rem, 8rem) minmax(5rem, 8rem) minmax(5rem, 8rem); 
+    align-items: center; 
+}
+
+.header-layout .left-options .option{
+    height: 3rem;
+    width: 5rem; 
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: hsl(30deg, 2%, 52%);
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.header-layout .left-options .option:hover{
+    background-color: rgba(0.2, 0.2, .2, .02);
+}
+/* [RIGHT SIDE] */ 
+
+.right-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: inherit;
+    align-items: center;
+    justify-items: flex-start;
+    /* background-color: red; */
+    
+}
+
+.right-options .option{    
+    display: flex;
+    justify-content: end;
+    /* background-color: #211f1f; */
+    height: 55%;
+    width: clamp(8rem, 20vw, 15rem);
+
+} 
+
+.right-options .option .button {
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.right-options .option-language {
+    display: flex;
+    justify-content: center;
+    width: 10rem;
+    /* background-color: #81807b; */
+} 
+
+.right-options .option-language .language{
+    width: 6.5rem;
+    border: 2px solid #c6c4c0;
+}
+
+.right-options .option-partner .partner{
+    border: 2px solid #81807b;
+}
+ 
+.right-options .option-order .order{
+    border: 2px none;
+    background-color: #fff;
+}
+
+.right-options .option .button a{
+    text-decoration: none;
+    color: #211f1f;
+    font-family: var(--font-nutino);
+} 
+
+.right-options :is(.option-partner, .option-order){
+}
+
+
+

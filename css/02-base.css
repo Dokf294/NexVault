@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.page-layout{  
+    font-family: var(--font-nutino);
+    min-height: 200vh; 
+    padding: 0;
+    margin: 0;
+} 
+

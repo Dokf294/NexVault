@@ -17,9 +17,26 @@
     z-index: 3;
 } 
 .main-layout{
-    background-color: rgb(111, 255, 0);
-
+    display: grid;
+    grid-template-rows: .5fr 1fr 1fr;
+    /* background-color: rgb(111, 255, 0); */
+    
 }
+
+.main-layout::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    width: 1px;
+    background: rgba(0,0,0,.15);
+    box-shadow:
+        25vw 0 0 rgba(0,0,0,.15),
+        50vw 0 0 rgba(0,0,0,.15);
+    pointer-events: none;
+}
+
 .footer-layout{
     background-color: rgb(21, 0, 255);
 

@@ -1,0 +1,17 @@
+.introduction { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    background-color: aqua;
+} 
+
+.left-text{
+
+} 
+
+.right-text{
+
+} 
+
+.small-text{
+    
+}

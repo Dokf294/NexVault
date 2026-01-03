@@ -19,7 +19,7 @@
 }
 
 .header-icon .icon .logo {
-    mask-image: url(../assets/payload.svg);
+    mask-image: url(../assets/svg/payload.svg);
     height: calc(1.9rem * 1.8);
     width: calc(1.5rem * 1.8);
     mask-size: cover;
@@ -62,7 +62,6 @@
 
 .right-options {
     display: flex;
-    grid-template-rows: inherit;
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
@@ -70,11 +69,6 @@
     transition: gap var(--time-animation);
 }
 
-@media (min-width: 900px){
-    .right-options {
-        gap:35px;
-    }
-}
 .right-options .option {
     display: flex;
     justify-content: end;
@@ -125,7 +119,7 @@
 
 .right-options .option-language .language .arrow {
     margin: 0 0 1px 4px;
-    mask-image: url(../assets/arrowdown.svg);
+    mask-image: url(../assets/svg/arrowdown.svg);
     background-color: currentColor;
     height: 2.2rem;
     width: 2.2rem;
@@ -150,4 +144,15 @@
     font-family: var(--font-nutino);
     height: 100%;
     width: 100%;
+} 
+
+@media (min-width: 900px){
+    .right-options {
+        gap:35px;
+    } 
+}
+@media (max-width: 600px){
+    .right-options .option-language .language{
+        width: 5.5rem;
+    }
 }

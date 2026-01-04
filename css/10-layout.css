@@ -2,12 +2,11 @@
 
 .body-page-layout {
     display: grid;
-    min-height: 100vh;
 
-    background-color: var(--color-gray-60);
+    background-color: var(--color-black);
 
-    grid-template-rows:
-        98px 1fr auto;
+    /* grid-template-rows:
+        98px 1fr auto; */
 }
 
 
@@ -15,16 +14,17 @@
     display: grid;
     grid-template-columns: minmax(6rem, 12rem) 1fr 1fr;
     grid-template-rows: inherit;
+    height: 98px;
     /* background-color: red; */
 }
 
 .main-layout {
     position: relative;
     display: grid;
-
-    grid-auto-rows: .4fr 1fr 1fr;
+    height: 200rem;
+    /* grid-auto-rows: .4fr 1fr 1fr; */
     /* background-color: rgb(111, 255, 0); */
-
+    /* gap: 0px; */
 }
 
 .main-layout::after {
@@ -33,12 +33,12 @@
     top: -20%;
     left: 25%; 
     width: 1px;
-    height: 75%; 
-    background: rgba(0,0,0,.15);
+    height: 58.15%; 
+    background: rgba(255, 255, 255, 0.3);
     box-shadow:
-        25vw 0 0 rgba(0,0,0,.15),
-        50vw 0 0 rgba(0,0,0,.15),
-        75vw 0 0 rgba(0,0,0,.15); /* вот добавили четвёртую линию */
+        25vw 0 0 rgba(255, 255, 255, 0.3),
+        50vw 0 0 rgba(255, 255, 255, 0.3),
+        75vw 0 0 rgba(255, 255, 255, 0.3); /* вот добавили четвёртую линию */
     pointer-events: none;
 }
 
@@ -46,6 +46,6 @@
 
 
 .footer-layout {
-    background-color: rgb(21, 0, 255);
-
+    /* background-color: rgb(21, 0, 255); */
+    height: 20rem;
 }

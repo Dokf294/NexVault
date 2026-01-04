@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* background-color: aqua; */
-    min-height: clamp(400px, 100vh, 400px);
+    height: 20rem;
 }
 
 .introduction .left-text {
@@ -12,6 +12,9 @@
     font-size: 4rem;
     font-family: var(--font-Helvetica-Neue);
     font-weight: 100;
+
+    color: #e3e1dd;
+
     /* background-color: purple; */
     transition: padding var(--time-animation);
 }
@@ -26,6 +29,7 @@
 
 .introduction .right-text .small-text {
     font-size: 24px;
+    color: #e3e1dd;
 }
 
 /* [header] */
@@ -34,7 +38,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* background-color: red; */
-    min-height: clamp(900px, 100vh, 900px);
+
+    height: 900px;
+}
+
+.main-layout .header::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    width: 50.2%;
+    height: 1px;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.3));
+    z-index: 2;
 }
 
 .main-layout .header .motivational-text {
@@ -53,10 +70,9 @@
 
 .main-layout .header .motivational-text .motional p {
     position: relative;
-    border: 1px inset rgba(0, 0, 0, 0.326);
     font-size: 3rem;
-    color: #181818;
-    background-color: var(--color-gray-60);
+    color: #fff;
+    /* background-color: var(--color-gray-60); */
     z-index: 15;
 }
 
@@ -68,18 +84,21 @@
 .main-layout .header .company-laptop img {
     position: absolute;
     margin-left: 20rem;
-    height: 1200px;
-    width: 1300px;
-    top: 45%;
+    height: 800px;
+    top: 35%;
     left: 30%;
 
+    z-index: 1;
     transform: translate(-50%, -50%);
 }
 
+/* [services] */
 .main-layout .services {
     display: grid;
-
+    height: 1200px;
+    /* background-color: #575454; */
     grid-template-columns: 1fr 1fr;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .main-layout .services .lock {
@@ -105,6 +124,7 @@
     align-self: center;
     margin-left: 7rem;
     font-size: 2.5rem;
+    color: #fff;
 }
 
 .main-layout .services .provide-services .provide {
@@ -116,45 +136,76 @@
 
 .main-layout .services .provide-services .provide .slot-services {
     display: grid;
-    grid-template-areas: "protection-header stat-deployed" 
-                         "button text";
+
+    grid-template-areas:
+        "protection-header stat-deployed"
+        "text text"
+        "button button";
+
     font-family: var(--font-nutino);
-    border: 1px inset rgba(0, 0, 0, .15);
-    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.663);
     font-size: 1.2rem;
     padding-left: 2rem;
+    cursor: pointer;
+    overflow: hidden;
 }
-.main-layout .services .provide-services .provide .slot-services .stat-deployed{
+
+.main-layout .services .provide-services .provide .slot-services .stat-deployed {
     grid-area: stat-deployed;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    padding: 1rem 1rem 0 0;
+    transition: all var(--time-animation);
+    /* background-color: #5b1414; */
 }
-.main-layout .services .provide-services .provide .packet-inspection {}
+
+.main-layout .services .provide-services .provide .slot-services .stat-deployed svg {
+    color: #fff;
+    width: 35px;
+    transition: transform var(--time-animation);
+}
+
+/* .main-layout .services .provide-services .provide .packet-inspection {}
 
 .main-layout .services .provide-services .provide .ai-threat {}
 
 .main-layout .services .provide-services .provide .ddos-protection {}
 
-.main-layout .services .provide-services .provide .cloud-support {}
+.main-layout .services .provide-services .provide .cloud-support {} */
 
 .main-layout .services .provide-services .provide .slot-services .protection-header {
     grid-area: protection-header;
     font-size: 1.5rem;
-
+    color: #fff;
 }
 
 .main-layout .services .provide-services .provide .slot-services .text {
     grid-area: text;
     color: #575454;
+    padding-right: 1rem;
+    max-height: 0;
+    opacity: 0;
+    transition: all .3s;
 }
 
 .main-layout .services .provide-services .provide .slot-services .button {
     grid-area: button;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     flex-direction: row-reverse;
     border: none;
     background-color: transparent;
     cursor: pointer;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    grid-column: 1 / -1;
+    max-height: 0;
+    opacity: 0;
+    transition: all .3s;
 }
 
 .main-layout .services .provide-services .provide .slot-services .button:hover svg {
@@ -164,13 +215,47 @@
 .main-layout .services .provide-services .provide .slot-services .button p {
     font-size: 1.5rem;
     font-weight: 600;
+
 }
 
 .main-layout .services .provide-services .provide .slot-services .button svg {
     transition: transform var(--time-animation);
-
     width: 40px;
     height: 25px;
+
+}
+
+.main-layout .services .lock {
+    /* background-color: red; */
+    position: relative;
+}
+
+.main-layout .services .lock .grid {
+    position: relative;
+    height: 39rem;
+    width: 60rem;
+    left: 10%;
+    top: 15%;
+    
+}
+.main-layout .services .lock .grid::before {
+    content: "";
+    position: absolute;
+    height: 39rem;
+    
+    width: 60rem;
+    pointer-events: none;
+    opacity: .1;
+    background-image: url(https://payloadcms.com/images/scanline-light.png);
+}
+
+.Desktop_crosshair{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%);
+    opacity: .7;
 }
 
 @media (max-width: 1000px) {
@@ -180,5 +265,11 @@
 
     .introduction .left-text {
         padding-left: .5rem;
+    }
+}
+
+@media(max-width: 900px) {
+    .main-layout .services .provide-services .provide .slot-services .stat-deployed {
+        padding: 1rem 0 0 0;
     }
 }

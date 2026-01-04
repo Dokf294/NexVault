@@ -93,9 +93,10 @@
 }
 
 /* [services] */
+
 .main-layout .services {
     display: grid;
-    height: 1200px;
+    height: 1100px;
     /* background-color: #575454; */
     grid-template-columns: 1fr 1fr;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -258,6 +259,27 @@
     opacity: .7;
 }
 
+/* [achivent] */
+.main-layout .layout-achivent{
+    height: 650px;
+    background-color: red;
+}
+
+.layout-achivent .achivent-bg{
+    display: flex;
+    align-items: center;
+    
+    height: 100%;
+    background-color: rgb(165, 0, 236);
+}
+
+.achivent-bg .achivent {
+    position: relative;
+    height: 95%;
+    width: 98%;
+    left: 2%;
+    background-color: #000000;
+}
 @media (max-width: 1000px) {
     .introduction {
         grid-template-columns: 1fr .7fr;

@@ -2,11 +2,12 @@
 
 .footer-layout {
     position: relative;
+    overflow: hidden;
     /* background-color: rgb(21, 0, 255); */
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
-    height: 40rem;
+    height: 60rem;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -86,4 +87,44 @@
 
 .Footer_socialIconLink svg {
     line-height: 0;
+}
+
+.footer-layout::after {
+    content: "NexVault";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    font-size: 40rem;
+    font-weight: 800;
+    color: #1d1d1d;
+
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.8) 0%, transparent 150px);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.footer-layout::before {
+    content: "NexVault";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    font-size: 40rem;
+    font-weight: 800;
+
+    background: url("../assets/image/noise.png") repeat;
+    background-size: 400px 400px;
+
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    pointer-events: none;
 }
